@@ -1,13 +1,12 @@
-Thanks to the template team!
+The Kiyanja website was created thanks the template BizPage template!
 
-Template Name: BizPage
+with the References:
 Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
 
 ------------------------------------------------------------
-The Kiyanja website was created from this template
-
+The Kiyanja website project is a nodejs MVC  backend apps with a express handlebars templating engine
 
 ### My project setup file
 ### Creating the first level directories with mkdir -p _projectName/{config,models,views,controllers,public,route}
