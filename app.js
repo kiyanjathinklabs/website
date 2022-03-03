@@ -42,7 +42,12 @@ app.use(express.static('public'));
 
 //Routes
 const defaultRoutes = require('./routes/defaultRoutes');
+const { login } = require('./routes/login');
+const { admin } = require('./routes/admin');
+
 app.use('/', defaultRoutes);
+app.use('/login', defaultRoutes.use(login));
+app.use('/admin', defaultRoutes.use(admin));
 
 
 //create the Server and start it listening on a given port
