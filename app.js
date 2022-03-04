@@ -29,7 +29,7 @@ mongoose.connect( dbUrl, { useNewUrlParser: true } ).then(response => {
 
 //Views settings
 app.engine('handlebars', engine({
-    extname: '.hbs', 
+    extname: '.handlebars', 
     defaultLayout: 'default',
     layoutsDir: __dirname + '/views/layouts/',
     partialsDir: __dirname + '/views/partials'
@@ -42,12 +42,10 @@ app.use(express.static('public'));
 
 //Routes
 const defaultRoutes = require('./routes/defaultRoutes');
-const { login } = require('./routes/login');
-const { admin } = require('./routes/admin');
 
 app.use('/', defaultRoutes);
-app.use('/login', defaultRoutes.use(login));
-app.use('/admin', defaultRoutes.use(admin));
+app.use('/login', defaultRoutes);
+app.use('/admin', defaultRoutes);
 
 
 //create the Server and start it listening on a given port
